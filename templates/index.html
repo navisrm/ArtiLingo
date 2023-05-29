@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input and Output Blocks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 250px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .output {
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 18px;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        p {
+            color: #333;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Input and Output Blocks</h1>
+    <div>
+        <form action="/" method="POST">
+            <h2>Word Count:</h2>
+            <input type="text" name="word_count_input" placeholder="Enter word count"><br>
+            <h2>URL Link:</h2>
+            <input type="text" name="url_link_input" placeholder="Enter URL link"><br>
+            <h2>Language:</h2>
+            <select name="language_select">
+                <option value="english">English</option>
+                <option value="spanish">Spanish</option>
+                <option value="french">French</option>
+                <option value="german">German</option>
+            </select><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="output">
+        <h2>Output:</h2>
+        {% if output_text %}
+            <p>{{ output_text }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
