@@ -8,8 +8,10 @@ openai.api_key = "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"
 app = Flask(__name__)
 app.config['TIMEOUT'] = 120
 
+print("Does the control go through this everytime?")
+
 @app.route('/', methods=['GET', 'POST'])
-async def index():
+def index():
     output_text = None
     
     if request.method == 'POST':
@@ -18,7 +20,7 @@ async def index():
         language_selection = request.form.get('language_select','')
         
         # Process inputs and generate output
-        output_text = process_inputs(word_count_input, url_link_input, language_selection)
+        output_text = process_inputs( word_count_input, url_link_input, language_selection)
     
     return render_template('index.html', output_text=output_text)
 
@@ -32,7 +34,6 @@ def process_inputs(word_count, url_link, language_selected):
 
         # Extract the text from the JSON object
         text = response["choices"][0]["text"]
-        return text
         translated_output = translation_helpers.language_translation(text,language_selected)
         return translated_output
     except Exception as e:
