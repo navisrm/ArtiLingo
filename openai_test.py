@@ -3,7 +3,7 @@ import openai
 from helpers import openai_helpers
 
 # Retrieve values from environment variables
-openai.api_key = "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"
+openai.api_key = "OPEAI-API-KEY"
 
 try:
     response = openai_helpers.prompt_text_example(60, "https://www.indiatoday.in/world/story/pm-modi-australia-sydney-australian-pm-albanese-joint-statement-indian-community-2383428-2023-05-24")
