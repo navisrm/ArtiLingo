@@ -5,7 +5,7 @@ from helpers.translation_helpers import LanguageTranslationHelpers
 from language_codes import language_selectors
 
 # Retrieve values from environment variables
-openai.api_key = "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"
+openai.api_key = "OPENAI_API_KEY"
 
 app = Flask(__name__)
 app.config['TIMEOUT'] = 120
