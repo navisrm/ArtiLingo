@@ -1,7 +1,3 @@
-Certainly! Below is a README.md file for the `ArticleSummarization` project:
-
----
-
 # ArtiLingo
 
 ## Overview
